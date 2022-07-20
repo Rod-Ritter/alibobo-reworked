@@ -35,7 +35,7 @@ if (verifierAdmin()) {
         $tableauResultats .= genererUrl('Quantité en stock', 'qtestock', $champ, $orderby);
         $tableauResultats .= "</th>";
         $tableauResultats .= "<th>";
-        $tableauResultats .= genererUrl('Stock de sécurité', ' 	qtestockesecu ', $champ, $orderby);
+        $tableauResultats .= genererUrl('Stock de sécurité', 'qtestockesecu ', $champ, $orderby);
         $tableauResultats .= "</th>";
         $tableauResultats .= "</tr>";
         $tableauResultats .= "</thead>";
@@ -51,7 +51,6 @@ if (verifierAdmin()) {
             $tableauResultats .= "<td>" . $row['puht'] . "</td>";
             $tableauResultats .= "<td>" . $row['id_tva'] . "</td>";
             $tableauResultats .= "<td>" . $row['masse'] . "</td>";
-            $tableauResultats .= "<td>" . $row['id_categorie'] . "</td>";
             $tableauResultats .= "<td>" . $row['qtestock'] . "</td>";
             $tableauResultats .= "<td>" . $row['qtestockesecu'] . "</td>";
             $tableauResultats .= "</tr>";
