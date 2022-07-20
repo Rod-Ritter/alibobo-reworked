@@ -9,6 +9,7 @@ if (verifierAdmin()) {
         $orderby = $_GET['orderby'] ?? "asc";
 
         $requeteArticles = "SELECT * FROM articles ORDER BY $champ $orderby";
+        $deleteArticle = "DELETE FROM `articles` WHERE `articles`.`id_article` = 1";
 
         $tableauResultats = "<table>";
         $tableauResultats .= "<thead>";
