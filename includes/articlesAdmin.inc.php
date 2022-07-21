@@ -9,7 +9,6 @@ if (verifierAdmin()) {
         $orderby = $_GET['orderby'] ?? "asc";
 
         $requeteArticles = "SELECT * FROM articles ORDER BY $champ $orderby";
-        $deleteArticles = "DELETE FROM articles WHERE id_article = :id_article";
 
         $tableauResultats = "<table id=\"articles\">";
         $tableauResultats .= "<thead>";
@@ -57,7 +56,7 @@ if (verifierAdmin()) {
             $tableauResultats .= "<td>" . $row['masse'] . "</td>";
             $tableauResultats .= "<td>" . $row['qtestock'] . "</td>";
             $tableauResultats .= "<td>" . $row['qtestockesecu'] . "</td>";
-            $tableauResultats .= "<td <a href=\"index.php?page=articleSuppression&amp;articleId=" . $row['id_article'] . "\">" . "Supprimer</a></td>";
+            $tableauResultats .= "<td><a href=\"index.php?page=articlesSupp&amp;articleId=" . $row['id_article'] . "\">" . "Supprimer</a></td>";
             $tableauResultats .= "<td><button>Modifier</button></td>";
             $tableauResultats .= "</tr>";
         }
