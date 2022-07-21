@@ -4,9 +4,13 @@ header {
     min-height: 60px;
     margin: 0 auto;
 }
-
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* nav {
+    max-width: 500px;
 }
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+} */

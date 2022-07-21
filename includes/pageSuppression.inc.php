@@ -1,5 +1,5 @@
 <?php
 
 if (verifierAdmin()) {
-    return patator();
+    return suppArticle();
 }
