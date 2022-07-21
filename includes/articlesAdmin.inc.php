@@ -9,9 +9,9 @@ if (verifierAdmin()) {
         $orderby = $_GET['orderby'] ?? "asc";
 
         $requeteArticles = "SELECT * FROM articles ORDER BY $champ $orderby";
-        $deleteArticle = "DELETE FROM `articles` WHERE `articles`.`id_article` = 1";
+        $deleteArticles = "DELETE FROM articles WHERE id_article = :id_article";
 
-        $tableauResultats = "<table>";
+        $tableauResultats = "<table id=\"articles\">";
         $tableauResultats .= "<thead>";
         $tableauResultats .= "<tr>";
         $tableauResultats .= "<th>";
@@ -36,7 +36,10 @@ if (verifierAdmin()) {
         $tableauResultats .= genererUrl('Quantité en stock', 'qtestock', $champ, $orderby);
         $tableauResultats .= "</th>";
         $tableauResultats .= "<th>";
-        $tableauResultats .= genererUrl('Stock de sécurité', 'qtestockesecu ', $champ, $orderby);
+        $tableauResultats .= genererUrl('Stock de sécurité', 'qtestocksecu', $champ, $orderby);
+        $tableauResultats .= "</th>";
+        $tableauResultats .= "<th>";
+        $tableauResultats .= "Opérations";
         $tableauResultats .= "</th>";
         $tableauResultats .= "</tr>";
         $tableauResultats .= "</thead>";
@@ -54,6 +57,8 @@ if (verifierAdmin()) {
             $tableauResultats .= "<td>" . $row['masse'] . "</td>";
             $tableauResultats .= "<td>" . $row['qtestock'] . "</td>";
             $tableauResultats .= "<td>" . $row['qtestockesecu'] . "</td>";
+            $tableauResultats .= "<td <a href=\"index.php?page=articleSuppression&amp;articleId=" . $row['id_article'] . "\">" . "Supprimer</a></td>";
+            $tableauResultats .= "<td><button>Modifier</button></td>";
             $tableauResultats .= "</tr>";
         }
 

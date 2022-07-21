@@ -4,7 +4,15 @@ table {
     border-collapse: collapse;
 }
 
-th, td {
+th,td {
     padding: 10px;
     border: 1px solid #555;
+}
+td {
+    background: #fff;
+}
+
+thead {
+    background-color: #1c87c9;
+    color: #fff
 }
