@@ -28,3 +28,53 @@ qtestockesecu
     <div>
         <input type="checkbox" name="cgu" id="cgu" value="1"<?=isset($_POST['cgu'])?"checked":'';?> /><label for="cgu" >J'accepte les <a href="index.php?page=cgu" target="_blank">Conditions Générales d'Utilisation</a></label>
     </div>
+
+    <?php
+
+class Sql
+{
+    private string $bddName;
+    private string $user;
+    private string $mdp;
+    private string $url;
+
+    public function getbddName(): string
+    {
+        return $this->bddName;
+    }
+
+    public function setbddName(string $bddName): void
+    {
+        $this->bddName = $bddName;
+    }
+
+    public function getUser(): string
+    {
+        return $this->user;
+    }
+
+    public function setUser(string $user): void
+    {
+        $this->user = $user;
+    }
+
+    public function getMdp(): string
+    {
+        return $this->mdp;
+    }
+
+    public function setMdp(string $mdp): void
+    {
+        $this->mdp = $mdp;
+    }
+
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(string $url): void
+    {
+        $this->url = $url;
+    }
+}

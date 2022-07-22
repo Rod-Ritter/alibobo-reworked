@@ -7,6 +7,10 @@ require __DIR__ . '/vendor/autoload.php';
 require_once './functions/autoload.php';
 autoload("*.php");
 
+spl_autoload_register(function ($className) {
+    require_once './classes/' . $className . '.php';
+});
+
 // $toto ="toto";
 // dump($toto);
 
