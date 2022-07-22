@@ -57,7 +57,7 @@ if (verifierAdmin()) {
             $tableauResultats .= "<td>" . $row['qtestock'] . "</td>";
             $tableauResultats .= "<td>" . $row['qtestockesecu'] . "</td>";
             $tableauResultats .= "<td><a href=\"index.php?page=articlesSupp&amp;articleId=" . $row['id_article'] . "\">" . "Supprimer</a></td>";
-            $tableauResultats .= "<td><button>Modifier</button></td>";
+            $tableauResultats .= "<td><a href=\"index.php?page=articlesEdit&amp;articleId=" . $row['id_article'] . "\">" . "Editer</a></td>";
             $tableauResultats .= "</tr>";
         }
 
